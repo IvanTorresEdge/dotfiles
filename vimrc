@@ -2,58 +2,58 @@
 
 set shell=/bin/sh
 
-set t_Co=256                      " Enable colors (must be set before syntax enable)
+set t_Co=256                               " Enable colors (must be set before syntax enable)
 set background=dark
 color lucius
 
-set nocompatible                  " Must come first because it changes other options.
+set nocompatible                           " Must come first because it changes other options.
 
 filetype off
 
 call pathogen#runtime_append_all_bundles()
 
-syntax enable                     " Turn on syntax highlighting.
+syntax enable                              " Turn on syntax highlighting.
 
-filetype plugin indent on         " Turn on file type detection.
+filetype plugin indent on                  " Turn on file type detection.
 
-runtime macros/matchit.vim        " Load the matchit plug-in.
+runtime macros/matchit.vim                 " Load the matchit plug-in.
 
-set showcmd                       " Display incomplete commands.
-set showmode                      " Display the mode you're in.
+set showcmd                                " Display incomplete commands.
+set showmode                               " Display the mode you're in.
 
-set backspace=indent,eol,start    " Intuitive backspacing.
+set backspace=indent,eol,start             " Intuitive backspacing.
 
-set hidden                        " Handle multiple buffers better.
+set hidden                                 " Handle multiple buffers better.
 
-set wildmenu                      " Enhanced command line completion.
-set wildmode=list:longest         " Complete files like a shell.
+set wildmenu                               " Enhanced command line completion.
+set wildmode=list:longest                  " Complete files like a shell.
 
-set ignorecase                    " Case-insensitive searching.
-set smartcase                     " But case-sensitive if expression contains a capital letter.
+set ignorecase                             " Case-insensitive searching.
+set smartcase                              " But case-sensitive if expression contains a capital letter.
 
-set number                        " Show line numbers.
-set ruler                         " Show cursor position.
+set number                                 " Show line numbers.
+set ruler                                  " Show cursor position.
 
-set incsearch                     " Highlight matches as you type.
-set hlsearch                      " Highlight matches.
+set incsearch                              " Highlight matches as you type.
+set hlsearch                               " Highlight matches.
 
-set nowrap                        " Turn on line wrapping.
-set scrolloff=3                   " Show 3 lines of context around the cursor.
+set nowrap                                 " Turn on line wrapping.
+set scrolloff=3                            " Show 3 lines of context around the cursor.
 
-set title                         " Set the terminal's title
+set title                                  " Set the terminal's title
 
-set visualbell                    " No beeping.
+set visualbell                             " No beeping.
 
-set nobackup                      " Don't make a backup before overwriting a file.
-set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+set nobackup                               " Don't make a backup before overwriting a file.
+set nowritebackup                          " And again.
+set directory=$HOME/.vim/tmp//,.           " Keep swap files in one location
 
-set tabstop=2                     " Global tab width.
-set shiftwidth=2                  " And again, related.
-set softtabstop=2                 " set backspace to return the same number of spaces with indentation
-set expandtab                     " Use spaces instead of tabs
+set tabstop=2                              " Global tab width.
+set shiftwidth=2                           " And again, related.
+set softtabstop=2                          " set backspace to return the same number of spaces with indentation
+set expandtab                              " Use spaces instead of tabs
 
-set laststatus=2                  " Show the status line all the time
+set laststatus=2                           " Show the status line all the time
 set cmdheight=2
 
 set grepprg=ack
@@ -94,7 +94,7 @@ nnoremap k gk
 nnoremap - ^
 nnoremap _ $
 
-" Append matching 
+" Append matching
 inoremap (( ()<Left>
 inoremap [[ []<Left>
 inoremap {{ {}<Left>
