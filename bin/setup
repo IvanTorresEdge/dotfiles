@@ -61,8 +61,10 @@ Object.keys(files).forEach(function (key) {
 fs.readFile(path.join(__dirname, '../gitconfig.mustache'), 'utf8', function (err, data) {
     var file   = path.join(process.env['HOME'], '/.gitconfig'),
         config = Mustache.to_html(data, argv);
-    fs.writeFile(file, config, function (err) {
-        if (err) { console.log(err); throw err; }
-        console.log(file, 'OK');
+    fs.unlink(file, function (err) {
+        fs.writeFile(file, config, function (err) {
+            if (err) { console.log(err); throw err; }
+            console.log(file, 'OK');
+        });
     });
 });
