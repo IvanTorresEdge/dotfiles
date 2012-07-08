@@ -1,0 +1,68 @@
+#!/usr/bin/env node
+
+var fs       = require('fs'),
+    Mustache = require('mustache'),
+    optimist = require('optimist'),
+    path     = require('path');
+
+var argv = optimist.usage('Usage -n Real Name -m user@example.com -u username -t token', {
+    'n': {
+        'type'        : 'string',
+        'description' : 'Your name',
+        'alias'       : 'name'
+    },
+    'm': {
+        'type'        : 'string',
+        'description' : 'Your email',
+        'alias'       : 'email'
+    },
+    'u': {
+        'type'        : 'string',
+        'description' : 'Github username',
+        'alias'       : 'username'
+    },
+    't': {
+        'type'        : 'string',
+        'description' : 'Github token',
+        'alias'       : 'token'
+    }
+}).demand(['m', 't']).argv;
+
+var files = {
+    'ackrc': {
+        'src': path.join(__dirname, '../ackrc'),
+        'dest': path.join(process.env['HOME'], '/.ackrc')
+    },
+    'gvimrc': {
+        'src': path.join(__dirname, '../gvimrc'),
+        'dest': path.join(process.env['HOME'], '/.gvimrc')
+    },
+    'vimrc': {
+        'src': path.join(__dirname, '../vimrc'),
+        'dest': path.join(process.env['HOME'], '/.vimrc')
+    },
+    'zshrc': {
+        'src': path.join(__dirname, '../zshrc'),
+        'dest': path.join(process.env['HOME'], '/.zshrc')
+    }
+};
+
+Object.keys(files).forEach(function (key) {
+    var src  = files[key].src,
+        dest = files[key].dest;
+    fs.unlink(dest, function (err) {
+        fs.symlink(src, dest, function (err) {
+            if (err) { console.log(err, dest); throw err; }
+            console.log(dest, 'OK');
+        });
+    });
+});
+
+fs.readFile(path.join(__dirname, '../gitconfig.mustache'), 'utf8', function (err, data) {
+    var file   = path.join(process.env['HOME'], '/.gitconfig'),
+        config = Mustache.to_html(data, argv);
+    fs.writeFile(file, config, function (err) {
+        if (err) { console.log(err); throw err; }
+        console.log(file, 'OK');
+    });
+});

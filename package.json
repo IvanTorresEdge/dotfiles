@@ -1,0 +1,20 @@
+{
+  "name": "dotfiles",
+  "description": "my dotfiles",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mexpolk/dotfiles",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mexpolk/dotfiles.git"
+  },
+  "engines": {
+    "node": ">=0.8.1"
+  },
+  "dependencies": {
+    "optimist": "~0.3.4",
+    "mustache": "~0.4.0"
+  },
+  "bin": {
+    "setup": "bin/setup"
+  }
+}

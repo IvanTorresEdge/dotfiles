@@ -1,0 +1,17 @@
+*~
+*.sw[a-z]
+
+# Exuberant Tags
+tags
+
+# Rails
+/.bundle/*
+/log/*
+/tmp/*
+/db/*.sqlite3
+/db/schema.rb
+**.orig
+config/database.yml
+.AppleDouble
+/patches/*
+.DS_Store
