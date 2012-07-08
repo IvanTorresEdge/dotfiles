@@ -15,3 +15,10 @@ set guioptions-=r                 " Don't show right scrollbar
 set guioptions-=l                 " Don't show left scrollbar
 
 set cc=81                         " Margin at column #80
+
+if has("gui_macvim")
+  macmenu &Edit.Find.Find\.\.\. key=<nop>
+  map <D-f> :CtrlP<cr>
+  map <D-j> :CtrlPBuffer<cr>
+  map <D-k> :Explore<cr>
+endif

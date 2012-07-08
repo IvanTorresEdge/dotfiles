@@ -76,8 +76,8 @@ let mapleader = ","
 " File navigation
 nnoremap <silent> <leader>a :b#<cr>
 nnoremap <silent> <leader>f :CtrlP<cr>
-nnoremap <silent> <leader>, :CtrlPBuffer<cr>
-nnoremap <silent> <leader>. :Explore<cr>
+nnoremap <silent> <leader>j :CtrlPBuffer<cr>
+nnoremap <silent> <leader>k :Explore<cr>
 
 " Goto definition
 nnoremap gd <c-]>
