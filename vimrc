@@ -108,13 +108,6 @@ nnoremap <LEADER>m :nohlsearch<cr>/<BS>
 " Save file as sudo
 nnoremap :W !sudo tee % >/dev/null
 
-" Annoyances
-" nmap :Q :q
-" nmap :X :x
-" nmap :qç :q
-" nmap :xç :x
-" nmap :wç :w
-
 " Visual Mode Mappings
 
 " Keep selection after indent a visual block
