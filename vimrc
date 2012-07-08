@@ -66,7 +66,7 @@ autocmd BufNewFile,BufRead *.js.erb set filetype=javascript
 autocmd FileType * set list
 
 " Strip trailing white spaces
-autocmd BufWritePre *.md,*.js,*.rb,*.html,*.erb,*.css,*.sass,*.coffee call StripTrailingWhiteSpaces()
+autocmd BufWritePre * call StripTrailingWhiteSpaces()
 
 " Leader Key Mappings
 
