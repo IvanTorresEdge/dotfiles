@@ -37,6 +37,10 @@ var files = {
         'src': path.join(__dirname, '../gvimrc'),
         'dest': path.join(process.env['HOME'], '/.gvimrc')
     },
+    'vim': {
+        'src': path.join(__dirname, '../vim'),
+        'dest': path.join(process.env['HOME'], '/.vim')
+    },
     'vimrc': {
         'src': path.join(__dirname, '../vimrc'),
         'dest': path.join(process.env['HOME'], '/.vimrc')
