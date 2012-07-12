@@ -46,3 +46,15 @@
 [submodule "vim/bundle/jslint.vim"]
 	path = vim/bundle/jslint.vim
 	url = git://github.com/hallettj/jslint.vim.git
+[submodule "vim/bundle/vim-handlebars"]
+	path = vim/bundle/vim-handlebars
+	url = git://github.com/nono/vim-handlebars.git
+[submodule "vim/bundle/vim-css3-syntax"]
+	path = vim/bundle/vim-css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax.git
+[submodule "vim/bundle/vim-css-color"]
+	path = vim/bundle/vim-css-color
+	url = git://github.com/skammer/vim-css-color.git
+[submodule "vim/bundle/vim-less"]
+	path = vim/bundle/vim-less
+	url = git://github.com/groenewege/vim-less.git
