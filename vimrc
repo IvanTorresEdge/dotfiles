@@ -176,3 +176,6 @@ imap <c-c> <esc>
 " CoffeeScript
 let coffee_compile_vert=1
 map <leader>c :CoffeeCompile<CR>
+
+" CtrlP
+let g:ctrlp_match_window_reversed = 0
