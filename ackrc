@@ -1,6 +1,11 @@
---type-add=ruby=.haml,.rake
+--type-add=ruby=.rake
+--type-set=hbs=.hbs
+--type-set=mustache=.mustache
+--type-set=haml=.haml,.hamljs
 --type-set=sass=.sass
 --type-set=scss=.scss
+--type-set=less=.less
+--type-set=coffee=.coffee
 --ignore-dir=tmp
 --ignore-dir=log
 --no-sql
