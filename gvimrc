@@ -18,7 +18,8 @@ set cc=81              " Margin at column #80
 
 if has("gui_macvim")
   macmenu &Edit.Find.Find\.\.\. key=<nop>
-  map <D-f> :CtrlP<cr>
-  map <D-j> :CtrlPBuffer<cr>
-  map <D-k> :Explore<cr>
+  noremap <silent> <D-f> :CtrlP<cr>
+  noremap <silent> <D-F> :CtrlPClearAllCaches<cr>
+  noremap <silent> <D-j> :CtrlPBuffer<cr>
+  noremap <silent> <D-k> :Explore<cr>
 endif

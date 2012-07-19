@@ -76,6 +76,7 @@ let mapleader = ","
 " File navigation
 nnoremap <silent> <leader>a :b#<cr>
 nnoremap <silent> <leader>f :CtrlP<cr>
+nnoremap <silent> <leader>F :CtrlPClearAllCaches<cr>
 nnoremap <silent> <leader>j :CtrlPBuffer<cr>
 nnoremap <silent> <leader>k :Explore<cr>
 
@@ -177,5 +178,7 @@ imap <c-c> <esc>
 let coffee_compile_vert=1
 map <leader>c :CoffeeCompile<CR>
 
-" CtrlP
+" CrtlP
+let g:ctrlp_working_path_mode = 2
+let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_match_window_reversed = 0
