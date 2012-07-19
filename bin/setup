@@ -28,6 +28,10 @@ var files = {
         'src': path.join(__dirname, '../ackrc'),
         'dest': path.join(process.env['HOME'], '/.ackrc')
     },
+    'gemrc': {
+        'src': path.join(__dirname, '../gemrc'),
+        'dest': path.join(process.env['HOME'], '/.gemrc')
+    },
     'gitignore': {
         'src': path.join(__dirname, '../gitignore'),
         'dest': path.join(process.env['HOME'], '/.gitignore')
