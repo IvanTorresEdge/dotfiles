@@ -21,12 +21,7 @@ var argv = optimist.usage('Usage -n Real Name -m user@example.com -u username -t
         'description' : 'Github username',
         'alias'       : 'username'
     },
-    't': {
-        'type'        : 'string',
-        'description' : 'Github token',
-        'alias'       : 'token'
-    }
-}).demand(['m', 't']).argv;
+}).demand(['m']).argv;
 
 var files = {
     'ackrc': {
