@@ -68,6 +68,12 @@ autocmd FileType * set list
 " Strip trailing white spaces
 autocmd BufWritePre * call StripTrailingWhiteSpaces()
 
+" Autosave
+set updatetime=1000
+autocmd BufLeave * update
+autocmd CursorHold * update
+autocmd InsertLeave * update
+
 " Leader Key Mappings
 
 " Change leader key from \ to ,
