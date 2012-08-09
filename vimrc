@@ -4,7 +4,7 @@ set shell=/bin/sh
 
 set t_Co=256                               " Enable colors (must be set before syntax enable)
 set background=dark
-color lucius
+" color lucius
 
 set nocompatible                           " Must come first because it changes other options.
 
@@ -42,7 +42,8 @@ set scrolloff=3                            " Show 3 lines of context around the 
 
 set title                                  " Set the terminal's title
 
-set visualbell                             " No beeping.
+set novisualbell
+set errorbells
 
 set nobackup                               " Don't make a backup before overwriting a file.
 set nowritebackup                          " And again.
@@ -58,9 +59,12 @@ set cmdheight=2
 
 set grepprg=ack
 
+
 " Automatic fold settings for specific files. Uncomment to use.
 autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 autocmd BufNewFile,BufRead *.js.erb set filetype=javascript
+
+autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
 
 " autocmd FileType css,html,javascript,markdown,eruby setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType * set list
@@ -69,7 +73,7 @@ autocmd FileType * set list
 autocmd BufWritePre * call StripTrailingWhiteSpaces()
 
 " Autosave
-set updatetime=1000
+set updatetime=3000
 autocmd BufLeave * update
 autocmd CursorHold * update
 autocmd InsertLeave * update
