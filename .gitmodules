@@ -43,9 +43,6 @@
 [submodule "vim/snippets"]
 	path = vim/snippets
 	url = git@github.com:mexpolk/snipmate-snippets.git
-[submodule "vim/bundle/jslint.vim"]
-	path = vim/bundle/jslint.vim
-	url = git://github.com/hallettj/jslint.vim.git
 [submodule "vim/bundle/vim-handlebars"]
 	path = vim/bundle/vim-handlebars
 	url = git://github.com/nono/vim-handlebars.git
