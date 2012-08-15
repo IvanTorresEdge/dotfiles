@@ -86,9 +86,9 @@ let mapleader = ","
 " File navigation
 nnoremap <silent> <leader>a :b#<cr>
 nnoremap <silent> <leader>f :CtrlP<cr>
-nnoremap <silent> <leader>F :CtrlPClearAllCaches<cr>
-nnoremap <silent> <leader>j :CtrlPBuffer<cr>
-nnoremap <silent> <leader>k :Explore<cr>
+nnoremap <silent> <leader>r :CtrlPClearAllCaches<cr>
+nnoremap <silent> <leader>, :CtrlPBuffer<cr>
+nnoremap <silent> <leader>e :Explore<cr>
 
 " Goto definition
 nnoremap gd <c-]>
