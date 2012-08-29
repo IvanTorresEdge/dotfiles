@@ -88,6 +88,8 @@ nnoremap <silent> <leader>f :CtrlP<cr>
 nnoremap <silent> <leader>r :CtrlPClearAllCaches<cr>
 nnoremap <silent> <leader>, :CtrlPBuffer<cr>
 nnoremap <silent> <leader>e :Explore<cr>
+nnoremap <silent> <leader>t :NERDTreeToggle<cr>
+nnoremap <silent> <leader>T :NERDTreeFind<cr>
 
 " Goto definition
 nnoremap gd <c-]>
