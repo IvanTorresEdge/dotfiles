@@ -4,6 +4,7 @@ set shell=/bin/sh
 
 set t_Co=256                               " Enable colors (must be set before syntax enable)
 set background=dark
+colorscheme default
 
 set nocompatible                           " Must come first because it changes other options.
 
@@ -62,6 +63,7 @@ set grepprg=ack
 " Automatic fold settings for specific files. Uncomment to use.
 autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 autocmd BufNewFile,BufRead *.js.erb set filetype=javascript
+autocmd BufNewFile,BufRead *.hbs set filetype=html
 
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
 
@@ -72,10 +74,10 @@ autocmd FileType * set list
 autocmd BufWritePre * call StripTrailingWhiteSpaces()
 
 " Autosave
-set updatetime=3000
-autocmd BufLeave * update
-autocmd CursorHold * update
-autocmd InsertLeave * update
+" set updatetime=3000
+" autocmd BufLeave * update
+" autocmd CursorHold * update
+" autocmd InsertLeave * update
 
 " Leader Key Mappings
 
@@ -96,7 +98,7 @@ nnoremap gd <c-]>
 nnoremap gD g<c-]>
 
 " Update tags (include Gems)
-map <silent> <leader>ct :!ctags -R * `rvm gemdir \| tail -n 1`/*<cr>
+map <silent> <leader>ct :!ctags -R . `rvm gemdir \| tail -n 1`<cr>
 
 " Navigate by screen line (instead of text line)
 nnoremap j gj

@@ -9,13 +9,11 @@ set go-=L              " Hide left scrollbar
 syntax enable
 
 set background=dark
-colorscheme lucius
+colorscheme jellybeans
 
 set guioptions-=r      " Don't show right scrollbar
 set guioptions-=l      " Don't show left scrollbar
 
 set cc=81              " Margin at column #80
 
-if has("gui_macvim")
-  set guifont=Monaco:h12 " Font family and font size.
-endif
+set guifont=Inconsolata:h18 " Font family and font size.

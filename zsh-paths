@@ -7,3 +7,6 @@ export PATH=./node_modules/.bin:$PATH
 export PATH=./bin:$PATH
 
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
+
+export GOPATH=$HOME/Go
+export PATH=$GOPATH/bin:$PATH

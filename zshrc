@@ -30,6 +30,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# disable auto-correction
+unsetopt correct_all
+
 source $HOME/.dotfiles/zsh-paths
 source $HOME/.dotfiles/zsh-aliases
 source $HOME/.dotfiles/zsh-defaults
@@ -38,3 +41,8 @@ source $HOME/.zsh-local
 # RVM
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source "$HOME/.rvm/scripts/rvm"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+[[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"  # This loads NVM]
