@@ -51,6 +51,10 @@ var files = {
     'zshrc': {
         'src': path.join(__dirname, '../zshrc'),
         'dest': path.join(process.env['HOME'], '/.zshrc')
+    },
+    'zsh-theme': {
+        'src': path.join(__dirname, '../mexpolk.zsh-theme'),
+        'dest': path.join(process.env['HOME'], '/.oh-my-zsh/themes/mexpolk.zsh-theme')
     }
 };
 
