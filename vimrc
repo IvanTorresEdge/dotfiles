@@ -156,12 +156,6 @@ set winheight=10
 set winminheight=10
 set winheight=999
 
-" Vim Notes plug-in configuration
-let g:notesRoot = '~/Google Drive/Notes'
-let g:notesFileExtension = '.md'
-let g:notesFileType = 'markdown'
-let g:notesWordSeparator = '_'
-
 " Strip trailing white spaces before file is saved
 function! StripTrailingWhiteSpaces()
   " Store the current position
