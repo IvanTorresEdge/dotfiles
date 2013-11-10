@@ -9,7 +9,7 @@ set go-=L              " Hide left scrollbar
 syntax enable
 
 set background=dark
-colorscheme jellybeans
+colorscheme synic
 
 set guioptions-=r      " Don't show right scrollbar
 set guioptions-=l      " Don't show left scrollbar
