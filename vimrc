@@ -4,7 +4,7 @@ set shell=/bin/sh
 
 set t_Co=256                               " Enable colors (must be set before syntax enable)
 set background=dark
-colorscheme default
+colorscheme ir_black
 
 set nocompatible                           " Must come first because it changes other options.
 

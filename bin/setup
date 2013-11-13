@@ -55,7 +55,11 @@ var files = {
     'zsh-theme': {
         'src': path.join(__dirname, '../mexpolk.zsh-theme'),
         'dest': path.join(process.env['HOME'], '/.oh-my-zsh/themes/mexpolk.zsh-theme')
-    }
+    },
+    'tmux': {
+        'src': path.join(__dirname, '../tmux.conf'),
+        'dest': path.join(process.env['HOME'], '/.tmux.conf')
+    },
 };
 
 Object.keys(files).forEach(function (key) {
