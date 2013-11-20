@@ -188,8 +188,8 @@ let g:ctrlp_match_window_reversed = 0
 " Tabs
 
 nnoremap <C-t>n :tabnew<CR>
-nnoremap <C-t>k :tabprevious<CR>
-nnoremap <C-t>j :tabnext<CR>
+nnoremap <C-t>h :tabprevious<CR>
+nnoremap <C-t>l :tabnext<CR>
 nnoremap <C-t><C-t> :tabnext<CR>
 nnoremap <C-t>c :tabclose<CR>
 
