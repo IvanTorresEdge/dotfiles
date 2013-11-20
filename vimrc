@@ -105,12 +105,11 @@ nnoremap - ^
 nnoremap _ $
 
 " Append matching
-inoremap (( ()<Left>
-inoremap [[ []<Left>
-inoremap {{ {}<Left>
-inoremap "" ""<Left>
-inoremap '' ''<Left>
-inoremap \|\| \|\|<Left>
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
 
 " Turnoff search highlighting by pressing enter key
 nnoremap <LEADER>m :nohlsearch<cr>/<BS>
