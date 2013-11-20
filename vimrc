@@ -4,7 +4,7 @@ set shell=/bin/sh
 
 set t_Co=256                               " Enable colors (must be set before syntax enable)
 set background=dark
-colorscheme solarized
+colorscheme base16-tomorrow
 
 set nocompatible                           " Must come first because it changes other options.
 
@@ -58,7 +58,6 @@ set laststatus=2                           " Show the status line all the time
 set cmdheight=2
 
 set grepprg=ack
-
 
 " Automatic fold settings for specific files. Uncomment to use.
 autocmd BufNewFile,BufRead *.rabl set filetype=ruby

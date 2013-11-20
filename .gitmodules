@@ -76,3 +76,6 @@
 [submodule "vim/bundle/emmet-vim"]
 	path = vim/bundle/emmet-vim
 	url = http://github.com/mattn/emmet-vim.git
+[submodule "base16-builder"]
+	path = base16-builder
+	url = https://github.com/chriskempson/base16-builder.git
