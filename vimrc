@@ -149,11 +149,13 @@ vmap <C-j> ]egv
 " We have to have a winheight bigger than we want to set winminheight. But if
 " we set winheight to be huge before winminheight, the winminheight set will
 " fail.
+
 set winheight=10
 set winminheight=10
 set winheight=999
 
 " Strip trailing white spaces before file is saved
+
 function! StripTrailingWhiteSpaces()
   " Store the current position
   let _s=@/
@@ -167,6 +169,7 @@ function! StripTrailingWhiteSpaces()
 endfunction
 
 " Tabularize
+
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
   vmap <Leader>a= :Tabularize /=<CR>
@@ -176,13 +179,16 @@ if exists(":Tabularize")
 endif
 
 " Crazy? CTRL-C does not trigger InsertLeave
+
 imap <c-c> <esc>
 
 " CoffeeScript
+
 let coffee_compile_vert=1
 map <leader>c :CoffeeCompile<CR>
 
 " CrtlP
+
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_match_window_reversed = 0
@@ -220,3 +226,6 @@ function! Tabline()
 endfunction
 
 set tabline=%!Tabline()
+
+" UltSnip
+let g:UltSnipsSnippetDirectories=["snippets"]
