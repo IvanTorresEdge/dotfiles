@@ -64,6 +64,8 @@ autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 autocmd BufNewFile,BufRead *.js.erb set filetype=javascript
 autocmd BufNewFile,BufRead *.hbs set filetype=html
 
+autocmd FileType css,html,javascript,markdown,eruby setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
 autocmd FileType * set list
 
 " Strip trailing white spaces
