@@ -80,9 +80,11 @@ autocmd BufWritePre * call StripTrailingWhiteSpaces()
 " Leader Key Mappings
 
 " Change leader key from \ to ,
+
 let mapleader = ","
 
 " File navigation
+
 nnoremap <silent> <leader>a :b#<cr>
 nnoremap <silent> <leader>f :CtrlP<cr>
 nnoremap <silent> <leader>r :CtrlPClearAllCaches<cr>
@@ -91,9 +93,15 @@ nnoremap <silent> <leader>e :Explore<cr>
 nnoremap <silent> <leader>t :NERDTreeToggle<cr>
 nnoremap <silent> <leader>T :NERDTreeFind<cr>
 
+" Ack Mappings
+
+nmap <leader>a :tab split<CR>:Ack ""<left>
+nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
+
 " Goto definition
-nnoremap gd <c-]>
-nnoremap gD g<c-]>
+
+nnoremap gd <C-]>
+nnoremap gD g<C-]>
 
 " Update tags (include Gems)
 map <silent> <leader>ct :!ctags -R . `rvm gemdir \| tail -n 1`<cr>
@@ -107,34 +115,41 @@ nnoremap - ^
 nnoremap _ $
 
 " Append matching
-inoremap ( ()<Left>
-inoremap [ []<Left>
-inoremap { {}<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
+inoremap (( ()<left>
+inoremap [[ []<left>
+inoremap {{ {}<left>
+inoremap "" ""<left>
+inoremap '' ''<left>
 
 " Turnoff search highlighting by pressing enter key
-nnoremap <LEADER>m :nohlsearch<cr>/<BS>
+
+nnoremap <leader>m :nohlsearch<CR>/<BS>
 
 " Save file as sudo
+
 nnoremap :W !sudo tee % >/dev/null
 
 " Visual Mode Mappings
 
 " Keep selection after indent a visual block
+
 vnoremap > >gv
 vnoremap < <gv
 
 " Tag List plug-in configuration
+
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 
 " ctags file location
+
 set tags=./tags;
 
 " Use the same symbols as TextMate for tabstops and EOLs
+
 set listchars=tab:▸\ ,eol:¬
 
 " Bubbling text
+
 nmap <C-up> [e
 nmap <C-k> [e
 nmap <C-down> ]e
@@ -171,16 +186,16 @@ endfunction
 " Tabularize
 
 if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  nmap <Leader>a, :Tabularize /,<CR>
-  vmap <Leader>a, :Tabularize /,\zs<CR>
+  nmap <leader>a= :Tabularize /=<CR>
+  vmap <leader>a= :Tabularize /=<CR>
+  nmap <leader>a: :Tabularize /:\zs<CR>
+  nmap <leader>a, :Tabularize /,<CR>
+  vmap <leader>a, :Tabularize /,\zs<CR>
 endif
 
 " Crazy? CTRL-C does not trigger InsertLeave
 
-imap <c-c> <esc>
+imap <C-c> <esc>
 
 " CoffeeScript
 
@@ -227,8 +242,33 @@ endfunction
 
 set tabline=%!Tabline()
 
-" UltSnip
-let g:UltSnipsSnippetDirectories=["snippets"]
+" UltSnips
+
+let g:UltiSnipsSnippetDirectories=["snippets"]
+let g:UltiSnipsSnippetsDir="~/.dotfiles/vim/snippets"
+
+" UltiSnip + YCM Integration
+function! g:UltiSnips_Complete()
+    call UltiSnips_ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips_JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
+endfunction
+
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 
 " NERDTree
 let NERDTreeShowHidden=1
+
+

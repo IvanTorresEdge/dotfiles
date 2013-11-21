@@ -1,0 +1,35 @@
+snippet for "for loop (for)"
+for (var ${2:i} = ${1:Things}.length - 1; $2 >= 0; $2--) {
+	${3:$1[$2]}${VISUAL}$0
+}
+
+endsnippet
+
+snippet fun "function (fun)"
+function ${1:function_name}(${2:argument}) {
+	${VISUAL}$0
+}
+
+endsnippet
+
+snippet ife "if else (ife)"
+if (${1:condition}) {
+  ${2://code}
+} else {
+  ${3://code}
+}
+
+endsnippet
+
+snippet iife "Immediately-Invoked Function Expression (iife)"
+(function (${1:argument}) {
+	${VISUAL}$0
+}(${2:$1}));
+endsnippet
+
+snippet proto "Prototype method (proto)"
+${1:objectName}.prototype.${2:methodName} = function(${3:argument}) {
+	${VISUAL}$0
+};
+
+endsnippet
