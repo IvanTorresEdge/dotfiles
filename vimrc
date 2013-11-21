@@ -229,3 +229,6 @@ set tabline=%!Tabline()
 
 " UltSnip
 let g:UltSnipsSnippetDirectories=["snippets"]
+
+" NERDTree
+let NERDTreeShowHidden=1
