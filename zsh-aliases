@@ -9,3 +9,5 @@ alias ss='script/server'
 # Rails 3.x aliases
 alias rg='rails g'
 alias rs='rails s'
+
+alias vim='mvim -v'

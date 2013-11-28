@@ -59,6 +59,8 @@ set cmdheight=2
 
 set grepprg=ack
 
+set clipboard=unnamed
+
 " Automatic fold settings for specific files. Uncomment to use.
 autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 autocmd BufNewFile,BufRead *.js.erb set filetype=javascript
