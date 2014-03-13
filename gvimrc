@@ -16,4 +16,4 @@ set guioptions-=l      " Don't show left scrollbar
 
 set cc=81              " Margin at column #80
 
-set guifont=Inconsolata:h12 " Font family and font size.
+set guifont=Inconsolata\ for\ Powerline:h12 " Font family and font size.
