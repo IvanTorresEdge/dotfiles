@@ -12,6 +12,13 @@ function ${1:function_name}(${2:argument}) {
 
 endsnippet
 
+snippet if "if"
+if (${1:condition}) {
+  ${VISUAL}$0
+}
+
+endsnippet
+
 snippet ife "if else (ife)"
 if (${1:condition}) {
   ${2://code}
@@ -27,8 +34,12 @@ snippet iife "Immediately-Invoked Function Expression (iife)"
 }(${2:$1}));
 endsnippet
 
+snippet log "console.log"
+console.log(${1:"${2:value}"});
+endsnippet
+
 snippet proto "Prototype method (proto)"
-${1:objectName}.prototype.${2:methodName} = function(${3:argument}) {
+${1:object}.prototype.${2:method} = function(${3:argument}) {
 	${VISUAL}$0
 };
 

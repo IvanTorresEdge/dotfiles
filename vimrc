@@ -3,8 +3,8 @@
 set shell=/bin/sh
 
 set t_Co=256                               " Enable colors (must be set before syntax enable)
-set background=dark
-colorscheme base16-tomorrow
+set background=light
+colorscheme default
 
 set nocompatible                           " Must come first because it changes other options.
 
@@ -66,12 +66,7 @@ autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 autocmd BufNewFile,BufRead *.js.erb set filetype=javascript
 autocmd BufNewFile,BufRead *.hbs set filetype=html
 
-autocmd FileType css,html,javascript,markdown,eruby setlocal shiftwidth=4 tabstop=4 softtabstop=4
-
 autocmd FileType * set list
-
-" Strip trailing white spaces
-autocmd BufWritePre * call StripTrailingWhiteSpaces()
 
 " Autosave
 " set updatetime=3000
@@ -97,8 +92,8 @@ nnoremap <silent> <leader>T :NERDTreeFind<cr>
 
 " Ack Mappings
 
-nmap <leader>a :tab split<CR>:Ack ""<left>
-nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
+nmap <leader>s :tab split<CR>:Ack ""<left>
+nmap <leader>S :tab split<CR>:Ack <C-r><C-w><CR>
 
 " Goto definition
 
@@ -106,7 +101,7 @@ nnoremap gd <C-]>
 nnoremap gD g<C-]>
 
 " Update tags (include Gems)
-map <silent> <leader>ct :!ctags -R . `rvm gemdir \| tail -n 1`<cr>
+nnoremap <silent> <leader>ct :!ctags -R .<cr>
 
 " Navigate by screen line (instead of text line)
 nnoremap j gj
@@ -171,20 +166,6 @@ set winheight=10
 set winminheight=10
 set winheight=999
 
-" Strip trailing white spaces before file is saved
-
-function! StripTrailingWhiteSpaces()
-  " Store the current position
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
-  " Strip white spaces
-  %s/\s\+$//e
-  " Restore previous search history and cursor position
-  let @/=_s
-  call cursor(l, c)
-endfunction
-
 " Tabularize
 
 if exists(":Tabularize")
@@ -220,6 +201,7 @@ nnoremap <C-t>c :tabclose<CR>
 
 function! Tabline()
   let s = ''
+
   for i in range(tabpagenr('$'))
     let tab = i + 1
     let winnr = tabpagewinnr(tab)
@@ -230,15 +212,18 @@ function! Tabline()
 
     let s .= '%' . tab . 'T'
     let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#')
-    let s .= ' ' . tab .':'
-    let s .= (bufname != '' ? fnamemodify(bufname, ':t') : '[No Name] ')
+    let s .= ' ' . tab .':['
+    let s .= (bufname != '' ? fnamemodify(bufname, ':t') : '<No name>')
 
     if bufmodified
-      let s .= ' [+]'
+      let s .= ' +'
     endif
+
+    let s .= ']'
   endfor
 
   let s .= '%#TabLineFill#'
+
   return s
 endfunction
 
@@ -248,29 +233,12 @@ set tabline=%!Tabline()
 
 let g:UltiSnipsSnippetDirectories=["snippets"]
 let g:UltiSnipsSnippetsDir="~/.dotfiles/vim/snippets"
-
-" UltiSnip + YCM Integration
-function! g:UltiSnips_Complete()
-    call UltiSnips_ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips_JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
-
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsExpandTrigger="<C-tab>"
+let g:UltiSnipsListSnippets="<C-S-tab>"
 
 " NERDTree
+
 let NERDTreeShowHidden=1
 
-
+let g:airline_powerline_fonts = 1
