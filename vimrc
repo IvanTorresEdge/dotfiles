@@ -64,6 +64,7 @@ set clipboard=unnamed
 " Automatic fold settings for specific files. Uncomment to use.
 autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 autocmd BufNewFile,BufRead *.js.erb set filetype=javascript
+autocmd BufNewFile,BufRead .jshintrc set filetype=javascript
 autocmd BufNewFile,BufRead *.hbs set filetype=html
 
 autocmd FileType * set list

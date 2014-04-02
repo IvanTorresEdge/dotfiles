@@ -9,11 +9,9 @@ set go-=L              " Hide left scrollbar
 syntax enable
 
 set background=dark
-colorscheme base16-tomorrow
+colorscheme Tomorrow-Night
 
 set guioptions-=r      " Don't show right scrollbar
 set guioptions-=l      " Don't show left scrollbar
-
-set cc=81              " Margin at column #80
 
 set guifont=Inconsolata\ for\ Powerline:h12 " Font family and font size.
