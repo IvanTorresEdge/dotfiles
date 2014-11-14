@@ -46,8 +46,6 @@ set shell=/bin/sh
 
 set t_Co=256                               " Enable colors (must be set before syntax enable)
 set background=dark
-colorscheme default
-
 
 call pathogen#runtime_append_all_bundles()
 
@@ -98,7 +96,7 @@ set cmdheight=2
 
 set grepprg=ack
 
-set clipboard=unnamed
+" set clipboard=unnamed
 
 " Automatic fold settings for specific files. Uncomment to use.
 autocmd BufNewFile,BufRead *.rabl set filetype=ruby
