@@ -1,14 +1,47 @@
 " Copy or symlink to ~/.vimrc
 
+set nocompatible                           " Must come first because it changes other options.
+filetype off
+
+" -----------------------------------------------------------------------------
+" Start Vundle configuration
+" -----------------------------------------------------------------------------
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'duff/vim-scratch'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'groenewege/vim-less'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'mtscout6/vim-cjsx'
+Plugin 'mxw/vim-jsx'
+Plugin 'nono/vim-handlebars'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-surround'
+Plugin 'walm/jshint.vim'
+
+call vundle#end()
+
+" -----------------------------------------------------------------------------
+" End Vundle configuration
+" -----------------------------------------------------------------------------
+
 set shell=/bin/sh
 
 set t_Co=256                               " Enable colors (must be set before syntax enable)
-set background=light
+set background=dark
 colorscheme default
 
-set nocompatible                           " Must come first because it changes other options.
-
-filetype off
 
 call pathogen#runtime_append_all_bundles()
 
