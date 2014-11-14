@@ -243,3 +243,19 @@ let g:UltiSnipsListSnippets="<C-S-tab>"
 let NERDTreeShowHidden=1
 
 let g:airline_powerline_fonts = 1
+
+" Strip trailing white spaces before file is saved
+
+function! StripTrailingWhiteSpaces()
+  " Store the current position
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Strip white spaces
+  %s/\s\+$//e
+  " Restore previous search history and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+
+autocmd BufWritePre * call StripTrailingWhiteSpaces()
