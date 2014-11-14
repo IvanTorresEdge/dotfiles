@@ -1,24 +1,3 @@
-[submodule "vim/bundle/vim-notes"]
-	path = vim/bundle/vim-notes
-	url = git@github.com:mexpolk/vim-notes.git
-[submodule "vim/bundle/snipmate.vim"]
-	path = vim/bundle/snipmate.vim
-	url = git://github.com/msanders/snipmate.vim.git
-[submodule "vim/snippets"]
-	path = vim/snippets
-	url = git@github.com:mexpolk/snipmate-snippets.git
-[submodule "vim/bundle/vim-less"]
-	path = vim/bundle/vim-less
-	url = git://github.com/groenewege/vim-less.git
-[submodule "vim/bundle/vim-endwise"]
-	path = vim/bundle/vim-endwise
-	url = git://github.com/tpope/vim-endwise.git
-[submodule "vim/bundle/vim-javascript"]
-	path = vim/bundle/vim-javascript
-	url = git://github.com/pangloss/vim-javascript.git
 [submodule "base16-builder"]
 	path = base16-builder
 	url = https://github.com/chriskempson/base16-builder.git
-[submodule "vim/bundle/YouCompleteMe"]
-	path = vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
