@@ -14,4 +14,4 @@ colorscheme Tomorrow-Night
 set guioptions-=r      " Don't show right scrollbar
 set guioptions-=l      " Don't show left scrollbar
 
-set guifont=Inconsolata\ for\ Powerline:h12 " Font family and font size.
+set guifont=Inconsolata\ for\ Powerline:h16 " Font family and font size.
