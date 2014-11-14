@@ -10,6 +10,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'bling/vim-airline'
 Plugin 'duff/vim-scratch'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/Vundle.vim'
@@ -19,7 +20,6 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'mtscout6/vim-cjsx'
