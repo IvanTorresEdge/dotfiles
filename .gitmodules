@@ -1,102 +1,24 @@
-[submodule "vim/bundle/vim-scratch"]
-	path = vim/bundle/vim-scratch
-	url = git@github.com:mexpolk/vim-scratch.git
-[submodule "vim/bundle/vim-ragtag"]
-	path = vim/bundle/vim-ragtag
-	url = git://github.com/tpope/vim-ragtag.git
-[submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/tComment"]
-	path = vim/bundle/tComment
-	url = git://github.com/vim-scripts/tComment.git
-[submodule "vim/bundle/tabular"]
-	path = vim/bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
 [submodule "vim/bundle/vim-notes"]
 	path = vim/bundle/vim-notes
 	url = git@github.com:mexpolk/vim-notes.git
-[submodule "vim/bundle/ack.vim"]
-	path = vim/bundle/ack.vim
-	url = git://github.com/mileszs/ack.vim.git
-[submodule "vim/bundle/vim-coffee-script"]
-	path = vim/bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-[submodule "vim/bundle/vim-git"]
-	path = vim/bundle/vim-git
-	url = https://github.com/tpope/vim-git.git
-[submodule "vim/bundle/ctrlp"]
-	path = vim/bundle/ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
-[submodule "vim/bundle/vim-unimpaired"]
-	path = vim/bundle/vim-unimpaired
-	url = git://github.com/tpope/vim-unimpaired.git
 [submodule "vim/bundle/snipmate.vim"]
 	path = vim/bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
 [submodule "vim/snippets"]
 	path = vim/snippets
 	url = git@github.com:mexpolk/snipmate-snippets.git
-[submodule "vim/bundle/vim-handlebars"]
-	path = vim/bundle/vim-handlebars
-	url = git://github.com/nono/vim-handlebars.git
-[submodule "vim/bundle/vim-css3-syntax"]
-	path = vim/bundle/vim-css3-syntax
-	url = https://github.com/hail2u/vim-css3-syntax.git
 [submodule "vim/bundle/vim-less"]
 	path = vim/bundle/vim-less
 	url = git://github.com/groenewege/vim-less.git
-[submodule "vim/bundle/jshint.vim"]
-	path = vim/bundle/jshint.vim
-	url = git://github.com/walm/jshint.vim.git
 [submodule "vim/bundle/vim-endwise"]
 	path = vim/bundle/vim-endwise
 	url = git://github.com/tpope/vim-endwise.git
-[submodule "vim/bundle/vim-markdown"]
-	path = vim/bundle/vim-markdown
-	url = git://github.com/tpope/vim-markdown.git
-[submodule "vim/bundle/vim-golang"]
-	path = vim/bundle/vim-golang
-	url = git://github.com/jnwhiteh/vim-golang.git
-[submodule "vim/bundle/vim-fugitive"]
-	path = vim/bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/vim-javascript"]
 	path = vim/bundle/vim-javascript
 	url = git://github.com/pangloss/vim-javascript.git
-[submodule "vim/bundle/emmet-vim"]
-	path = vim/bundle/emmet-vim
-	url = http://github.com/mattn/emmet-vim.git
 [submodule "base16-builder"]
 	path = base16-builder
 	url = https://github.com/chriskempson/base16-builder.git
-[submodule "vim/bundle/tern_for_vim"]
-	path = vim/bundle/tern_for_vim
-	url = https://github.com/marijnh/tern_for_vim.git
 [submodule "vim/bundle/YouCompleteMe"]
 	path = vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule "vim/bundle/ultisnips"]
-	path = vim/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-[submodule "vim/bundle/tagbar"]
-	path = vim/bundle/tagbar
-	url = https://github.com/majutsushi/tagbar.git
-[submodule "vim/bundle/vim-mustache-handlebars"]
-	path = vim/bundle/vim-mustache-handlebars
-	url = https://github.com/mustache/vim-mustache-handlebars.git
-[submodule "vim/bundle/indentLine"]
-	path = vim/bundle/indentLine
-	url = https://github.com/Yggdroot/indentLine.git
-[submodule "vim/bundle/editorconfig-vim"]
-	path = vim/bundle/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "vim/bundle/vim-jsx"]
-	path = vim/bundle/vim-jsx
-	url = https://github.com/mxw/vim-jsx.git
-[submodule "vim/bundle/vim-cjsx"]
-	path = vim/bundle/vim-cjsx
-	url = https://github.com/mtscout6/vim-cjsx.git
