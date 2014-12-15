@@ -11,6 +11,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'bling/vim-airline'
+Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'duff/vim-scratch'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/Vundle.vim'
@@ -35,6 +36,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'walm/jshint.vim'
 Plugin 'wavded/vim-stylus'
+Plugin 'Yggdroot/indentLine'
 
 call vundle#end()
 
