@@ -44,6 +44,7 @@ call vundle#end()
 " End Vundle configuration
 " -----------------------------------------------------------------------------
 
+set encoding=utf-8
 set shell=/bin/sh
 
 set t_Co=256                               " Enable colors (must be set before syntax enable)
