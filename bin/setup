@@ -60,6 +60,14 @@ var files = {
         'src': path.join(__dirname, '../tmux.conf'),
         'dest': path.join(process.env['HOME'], '/.tmux.conf')
     },
+    'nvim': {
+        'src': '~/.vim',
+        'dest': '~/.config/nvim'
+    },
+    'nvimrc': {
+        'src': '~/.vimrc',
+        'dest': '~/.config/nvim/init.vim'
+    },
 };
 
 Object.keys(files).forEach(function (key) {

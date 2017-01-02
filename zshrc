@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="mexpolk"
+ZSH_THEME="robbyrussell"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -38,11 +38,13 @@ source $HOME/.dotfiles/zsh-aliases
 source $HOME/.dotfiles/zsh-defaults
 source $HOME/.zsh-local
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
 # RVM
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source "$HOME/.rvm/scripts/rvm"
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# source "$HOME/.rvm/scripts/rvm"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-[[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"  # This loads NVM]

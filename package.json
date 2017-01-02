@@ -1,6 +1,7 @@
 {
   "name": "dotfiles",
-  "description": "my dotfiles",
+  "description": "My dotfiles configurator",
+  "author": "Ivan Torres",
   "version": "0.0.1",
   "homepage": "https://github.com/mexpolk/dotfiles",
   "repository": {
@@ -11,8 +12,8 @@
     "node": ">=0.8.1"
   },
   "dependencies": {
-    "optimist": "~0.3.4",
-    "mustache": "~0.4.0"
+    "optimist": "^0.6.1",
+    "mustache": "^2.3.0"
   },
   "bin": {
     "setup": "bin/setup"
