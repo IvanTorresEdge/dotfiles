@@ -107,6 +107,7 @@ autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 autocmd BufNewFile,BufRead *.js.erb set filetype=javascript
 autocmd BufNewFile,BufRead .jshintrc set filetype=javascript
 autocmd BufNewFile,BufRead *.hbs set filetype=html
+autocmd BufEnter,BufNewFile,BufRead *.json set conceallevel=0
 
 autocmd FileType * set list
 
@@ -302,9 +303,13 @@ highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
 
-" MXW vim-jsx
+" vim-jsx
 
 let g:jsx_ext_required=0
+
+" vim-json
+
+let g:vim_json_syntax_conceal=0
 
 " Strip trailing white spaces before file is saved
 
