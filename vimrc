@@ -34,7 +34,7 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
-Plugin 'walm/jshint.vim'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'wavded/vim-stylus'
 Plugin 'Yggdroot/indentLine'
 
@@ -286,6 +286,24 @@ let NERDTreeShowHidden=1
 let g:airline_powerline_fonts=1
 let g:airline_left_sep=' '
 let g:airline_right_sep=' '
+
+" Syntastic
+
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_loc_list_height=5
+let g:syntastic_auto_loc_list=0
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=1
+let g:syntastic_javascript_checkers=["eslint"]
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
+
+" MXW vim-jsx
+
+let g:jsx_ext_required=0
 
 " Strip trailing white spaces before file is saved
 
