@@ -229,9 +229,10 @@ map <leader>c :CoffeeCompile<CR>
 
 " CrtlP
 
-let g:ctrlp_working_path_mode = 2
-let g:ctrlp_clear_cache_on_exit = 1
-let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_working_path_mode='a'
+let g:ctrlp_clear_cache_on_exit=1
+let g:ctrlp_match_window_reversed=0
+let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git'
 
 " Tabs
 
