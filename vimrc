@@ -52,7 +52,7 @@ set background=dark
 
 call pathogen#runtime_append_all_bundles()
 
-colo Tomorrow-Night
+colo default
 syntax enable                              " Turn on syntax highlighting.
 
 filetype plugin indent on                  " Turn on file type detection.
