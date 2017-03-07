@@ -37,6 +37,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'wavded/vim-stylus'
 Plugin 'Yggdroot/indentLine'
+Plugin 'metakirby5/codi.vim'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 

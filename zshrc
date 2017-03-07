@@ -46,5 +46,8 @@ export NVM_DIR="$HOME/.nvm"
 # PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # source "$HOME/.rvm/scripts/rvm"
 
+export GOPATH="$HOME/go"
+export PATH="$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
