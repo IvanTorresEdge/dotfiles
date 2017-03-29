@@ -32,6 +32,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'fatih/vim-go'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'godlygeek/tabular'
+Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf' }
@@ -39,6 +40,8 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
 Plugin 'metakirby5/codi.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'mtscout6/vim-cjsx'
@@ -347,3 +350,8 @@ inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function() abort
   return deoplete#close_popup() . "\<CR>"
 endfunction
+
+" editorconfig
+
+let g:EditorConfig_max_line_indicator = "none"
+
