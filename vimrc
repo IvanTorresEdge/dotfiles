@@ -87,6 +87,8 @@ set showmode                               " Display the mode you're in.
 
 set backspace=indent,eol,start             " Intuitive backspacing.
 
+set conceallevel=0
+
 set hidden                                 " Handle multiple buffers better.
 
 set wildmenu                               " Enhanced command line completion.
@@ -95,7 +97,7 @@ set wildmode=list:longest                  " Complete files like a shell.
 set ignorecase                             " Case-insensitive searching.
 set smartcase                              " But case-sensitive if expression contains a capital letter.
 
-set number                                 " Show line numbers.
+set number relativenumber                  " Show line numbers.
 set ruler                                  " Show cursor position.
 
 set incsearch                              " Highlight matches as you type.
@@ -130,7 +132,6 @@ autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 autocmd BufNewFile,BufRead *.js.erb set filetype=javascript
 autocmd BufNewFile,BufRead .jshintrc set filetype=javascript
 autocmd BufNewFile,BufRead *.hbs set filetype=html
-autocmd BufEnter,BufNewFile,BufRead *.json set conceallevel=0
 
 autocmd FileType * set list
 
@@ -145,6 +146,9 @@ autocmd FileType * set list
 " Change leader key from \ to ,
 
 let mapleader = ","
+
+" Why do I have to press <s>: to send commands? ; Doesn't do anything anyways!
+noremap ; :
 
 " File navigation
 
