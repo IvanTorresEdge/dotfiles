@@ -53,3 +53,4 @@ export PATH="$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
