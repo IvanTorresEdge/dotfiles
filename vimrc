@@ -23,22 +23,31 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'duff/vim-scratch'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'fatih/vim-go'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf' }
+Plugin 'junegunn/fzf.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'metakirby5/codi.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'mtscout6/vim-cjsx'
 Plugin 'mxw/vim-jsx'
+Plugin 'neomake/neomake'
 Plugin 'nono/vim-handlebars'
 Plugin 'pangloss/vim-javascript'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
@@ -46,14 +55,8 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'wavded/vim-stylus'
 Plugin 'Yggdroot/indentLine'
-Plugin 'metakirby5/codi.vim'
-Plugin 'fatih/vim-go'
-Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call vundle#end()
 
@@ -144,6 +147,7 @@ let mapleader = ","
 
 nnoremap <silent> <leader>a :b#<cr>
 nnoremap <silent> <leader>f :FZF<cr>
+nnoremap <silent> <leader>F :Ag<cr>
 nnoremap <silent> <leader>, :CtrlPBuffer<cr>
 nnoremap <silent> <leader>e :Explore<cr>
 nnoremap <silent> <leader>t :NERDTreeToggle<cr>
@@ -297,6 +301,12 @@ let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsExpandTrigger="<C-tab>"
 let g:UltiSnipsListSnippets="<C-S-tab>"
 
+" Neomake
+
+let g:neomake_javascript_eslint_exe = system('PATH=$(npm bin):$PATH && which eslint | tr -d "\n"')
+let g:neomake_javascript_enabled_makers = ['eslint']
+autocmd BufWritePost * Neomake
+
 " NERDTree
 
 let NERDTreeShowHidden=1
@@ -304,20 +314,6 @@ let NERDTreeShowHidden=1
 let g:airline_powerline_fonts=1
 let g:airline_left_sep=' '
 let g:airline_right_sep=' '
-
-" Syntastic
-
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_loc_list_height=5
-let g:syntastic_auto_loc_list=0
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=1
-let g:syntastic_javascript_checkers=["eslint"]
-
-highlight link SyntasticErrorSign SignColumn
-highlight link SyntasticWarningSign SignColumn
-highlight link SyntasticStyleErrorSign SignColumn
-highlight link SyntasticStyleWarningSign SignColumn
 
 " vim-jsx
 
