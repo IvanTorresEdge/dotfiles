@@ -1,6 +1,19 @@
+"
+"  /$$$$$$                            /$$              /$$    /$$ /$$
+" |_  $$_/                           | $/             | $$   | $$|__/
+"   | $$ /$$    /$$ /$$$$$$  /$$$$$$$|_//$$$$$$$      | $$   | $$ /$$ /$$$$$$/$$$$   /$$$$$$   /$$$$$$$
+"   | $$|  $$  /$$/|____  $$| $$__  $$ /$$_____/      |  $$ / $$/| $$| $$_  $$_  $$ /$$__  $$ /$$_____/
+"   | $$ \  $$/$$/  /$$$$$$$| $$  \ $$|  $$$$$$        \  $$ $$/ | $$| $$ \ $$ \ $$| $$  \__/| $$
+"   | $$  \  $$$/  /$$__  $$| $$  | $$ \____  $$        \  $$$/  | $$| $$ | $$ | $$| $$      | $$
+"  /$$$$$$ \  $/  |  $$$$$$$| $$  | $$ /$$$$$$$/         \  $/   | $$| $$ | $$ | $$| $$      |  $$$$$$$
+" |______/  \_/    \_______/|__/  |__/|_______/           \_/    |__/|__/ |__/ |__/|__/       \_______/
+"
+" Author: Ivan Torres
+" repo: https://github.com/mexpolk/dotfiles
+"
 " Copy or symlink to ~/.vimrc
 
-set nocompatible                           " Must come first because it changes other options.
+set nocompatible " Must come first because it changes other options.
 filetype off
 
 " -----------------------------------------------------------------------------
@@ -18,7 +31,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
-Plugin 'jnwhiteh/vim-golang'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
@@ -39,6 +51,9 @@ Plugin 'wavded/vim-stylus'
 Plugin 'Yggdroot/indentLine'
 Plugin 'metakirby5/codi.vim'
 Plugin 'fatih/vim-go'
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call vundle#end()
 
@@ -128,8 +143,7 @@ let mapleader = ","
 " File navigation
 
 nnoremap <silent> <leader>a :b#<cr>
-nnoremap <silent> <leader>f :CtrlP<cr>
-nnoremap <silent> <leader>r :CtrlPClearAllCaches<cr>
+nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>, :CtrlPBuffer<cr>
 nnoremap <silent> <leader>e :Explore<cr>
 nnoremap <silent> <leader>t :NERDTreeToggle<cr>
@@ -328,3 +342,12 @@ function! StripTrailingWhiteSpaces()
 endfunction
 
 autocmd BufWritePre * call StripTrailingWhiteSpaces()
+
+" Deoplete
+
+let g:deoplete#enable_at_startup = 1
+
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function() abort
+  return deoplete#close_popup() . "\<CR>"
+endfunction
