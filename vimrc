@@ -24,6 +24,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'albfan/ag.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'cakebaker/scss-syntax.vim'
@@ -75,7 +76,7 @@ set background=dark
 
 call pathogen#runtime_append_all_bundles()
 
-colo default
+colorscheme jellybeans
 syntax enable                              " Turn on syntax highlighting.
 
 filetype plugin indent on                  " Turn on file type detection.
@@ -154,7 +155,6 @@ noremap ; :
 
 nnoremap <silent> <leader>a :b#<cr>
 nnoremap <silent> <leader>f :FZF<cr>
-nnoremap <silent> <leader>F :Ag<cr>
 nnoremap <silent> <leader>, :CtrlPBuffer<cr>
 nnoremap <silent> <leader>e :Explore<cr>
 nnoremap <silent> <leader>t :NERDTreeToggle<cr>
