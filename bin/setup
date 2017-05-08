@@ -23,50 +23,52 @@ var argv = optimist.usage('Usage -n Real Name -m user@example.com -u username -t
     },
 }).demand(['m']).argv;
 
+var HOME = process.env['HOME'];
+
 var files = {
     'ackrc': {
         'src': path.join(__dirname, '../ackrc'),
-        'dest': path.join(process.env['HOME'], '/.ackrc')
+        'dest': path.join(HOME, '/.ackrc')
     },
     'gemrc': {
         'src': path.join(__dirname, '../gemrc'),
-        'dest': path.join(process.env['HOME'], '/.gemrc')
+        'dest': path.join(HOME, '/.gemrc')
     },
     'gitignore': {
         'src': path.join(__dirname, '../gitignore'),
-        'dest': path.join(process.env['HOME'], '/.gitignore')
+        'dest': path.join(HOME, '/.gitignore')
     },
     'gvimrc': {
         'src': path.join(__dirname, '../gvimrc'),
-        'dest': path.join(process.env['HOME'], '/.gvimrc')
+        'dest': path.join(HOME, '/.gvimrc')
     },
     'vim': {
         'src': path.join(__dirname, '../vim'),
-        'dest': path.join(process.env['HOME'], '/.vim')
+        'dest': path.join(HOME, '/.vim')
     },
     'vimrc': {
         'src': path.join(__dirname, '../vimrc'),
-        'dest': path.join(process.env['HOME'], '/.vimrc')
+        'dest': path.join(HOME, '/.vimrc')
     },
     'zshrc': {
         'src': path.join(__dirname, '../zshrc'),
-        'dest': path.join(process.env['HOME'], '/.zshrc')
+        'dest': path.join(HOME, '/.zshrc')
     },
     'zsh-theme': {
         'src': path.join(__dirname, '../mexpolk.zsh-theme'),
-        'dest': path.join(process.env['HOME'], '/.oh-my-zsh/themes/mexpolk.zsh-theme')
+        'dest': path.join(HOME, '/.oh-my-zsh/themes/mexpolk.zsh-theme')
     },
     'tmux': {
         'src': path.join(__dirname, '../tmux.conf'),
-        'dest': path.join(process.env['HOME'], '/.tmux.conf')
+        'dest': path.join(HOME, '/.tmux.conf')
     },
     'nvim': {
-        'src': '~/.vim',
-        'dest': '~/.config/nvim'
+        'src': path.join(HOME, '/.vim'),
+        'dest': path.join(HOME, '/.config/nvim')
     },
     'nvimrc': {
-        'src': '~/.vimrc',
-        'dest': '~/.config/nvim/init.vim'
+        'src': path.join(__dirname, '../vimrc'),
+        'dest': path.join(HOME, '/.config/nvim/init.vim')
     },
 };
 
@@ -82,7 +84,7 @@ Object.keys(files).forEach(function (key) {
 });
 
 fs.readFile(path.join(__dirname, '../gitconfig.mustache'), 'utf8', function (err, data) {
-    var file   = path.join(process.env['HOME'], '/.gitconfig'),
+    var file   = path.join(HOME, '/.gitconfig'),
         config = Mustache.to_html(data, argv);
     fs.unlink(file, function (err) {
         fs.writeFile(file, config, function (err) {
