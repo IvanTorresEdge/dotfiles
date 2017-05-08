@@ -21,7 +21,10 @@ npm install
 ## Vim Installation
 
 ```
-brew install ag curl fzf neovim tmux wget
+brew install ag curl fzf node tmux wget
+/usr/local/opt/fzf/install
+brew tap neovim/neovim
+brew install neovim
 brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
