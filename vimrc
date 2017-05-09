@@ -17,6 +17,12 @@ set nocompatible " Must come first because it changes other options.
 filetype off
 
 " -----------------------------------------------------------------------------
+" Setup Python paths
+" -----------------------------------------------------------------------------
+let g:python2_host_prog='/usr/local/bin/python'
+let g:python3_host_prog='/usr/local/bin/python3'
+
+" -----------------------------------------------------------------------------
 " Start Vundle configuration
 " -----------------------------------------------------------------------------
 
@@ -52,7 +58,7 @@ Plugin 'nono/vim-handlebars'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'

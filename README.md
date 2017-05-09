@@ -12,7 +12,9 @@
 ## Install Dependencies
 
 ```
-brew install ag curl fzf node tmux wget
+brew install ag curl fzf node tmux wget python python3
+pip install neovim --upgrade
+pip3 install neovim --upgrade
 /usr/local/opt/fzf/install
 brew tap neovim/neovim
 brew install neovim
