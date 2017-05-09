@@ -43,8 +43,8 @@ export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
 # RVM
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-# source "$HOME/.rvm/scripts/rvm"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source "$HOME/.rvm/scripts/rvm"
 
 export GOPATH="$HOME/go"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin"

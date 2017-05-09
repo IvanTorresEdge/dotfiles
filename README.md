@@ -9,16 +9,7 @@
 |______/  \_/    \_______/|__/  |__/|_______/       |_______/  \______/    \___/  |__/      |__/|__/ \_______/|_______/
 ```
 
-## Setup
-
-```
-git clone git@github.com:mexpolk/dotfiles.git ~/.dotfiles
-cd .dotfiles
-npm install
-./bin/setup -n "Your Real Name" -m "youremail@example.com" -u github-username
-```
-
-## Vim Installation
+## Install Dependencies
 
 ```
 brew install ag curl fzf node tmux wget
@@ -26,13 +17,21 @@ brew install ag curl fzf node tmux wget
 brew tap neovim/neovim
 brew install neovim
 brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-### Inside VIM run `:PluginInstall`
+## Setup
 
-Install patched fonts from https://github.com/powerline/fonts/archive/master.zip
-Install iTerm 2 themes from https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master
+```
+git clone git@github.com:mexpolk/dotfiles.git ~/.dotfiles
+cd .dotfiles
+git submodule init && git submodule update
+npm install
+./bin/setup -n "Your Real Name" -m "youremail@example.com" -u github-username
+```
+
+## Vim Installation
+
+Inside VIM run `:PluginInstall`
 
 ### Setup Gist Token
 
@@ -41,3 +40,7 @@ Go to https://github.com/settings/tokens, and generate a new token. Then create 
 ```
 token 000000000000000000000000000000000000000
 ```
+### Install Fonts and Schemes for iTerm
+
+* Fonts available under `nerd-fonts` directory (provided by https://nerdfonts.com/)
+* Schemes available under `schemes` directory (provided by http://iterm2colorschemes.com/)
