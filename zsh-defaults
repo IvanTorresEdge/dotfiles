@@ -1,1 +1,5 @@
-export EDITOR=/usr/local/bin/nvim
+export VOLTA_HOME=$HOME/.volta
+export GOPATH=$HOME/Go
+export EDITOR=/usr/local/bin/code
+export NODE_ENV=development
+

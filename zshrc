@@ -24,7 +24,7 @@ ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler git)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -33,24 +33,25 @@ source $ZSH/oh-my-zsh.sh
 # disable auto-correction
 unsetopt correct_all
 
+source $HOME/.dotfiles/zsh-defaults
 source $HOME/.dotfiles/zsh-paths
 source $HOME/.dotfiles/zsh-aliases
-source $HOME/.dotfiles/zsh-defaults
 source $HOME/.zsh-local
+
+# Rust
+source $HOME/.cargo/env
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # RVM
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source "$HOME/.rvm/scripts/rvm"
-
-export GOPATH="$HOME/go"
-export PATH="$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin"
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# source "$HOME/.rvm/scripts/rvm"
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# export PATH="/usr/local/heroku/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
